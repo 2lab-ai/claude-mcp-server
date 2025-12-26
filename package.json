@@ -1,6 +1,6 @@
 {
   "name": "@2lab.ai/claude-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for interacting with Anthropic's Claude CLI",
   "main": "./dist/claude-mcp-server.js",
   "bin": {
