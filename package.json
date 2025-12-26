@@ -1,0 +1,43 @@
+{
+  "name": "@2lab.ai/claude-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for interacting with Anthropic's Claude CLI",
+  "main": "./dist/claude-mcp-server.js",
+  "bin": {
+    "claude-mcp-server": "dist/claude-mcp-server.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/claude-mcp-server.js",
+    "inspect": "npm run build; npx @modelcontextprotocol/inspector node dist/claude-mcp-server.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "anthropic",
+    "server",
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.3",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
